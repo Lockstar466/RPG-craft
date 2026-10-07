@@ -2,18 +2,18 @@
 
 Un add-on pour Minecraft Bedrock Edition (Windows 10, Consoles, Mobile) ajoutant un système de classe, mana et capacités spéciales. C'est un projet personnel fait dans le contexte d'un serveur local avec des potes. Il sera optimisé pour une utilisation plus globale dans de prochianes mises à jour.
 
-## 🛠️ Technologies et Compétences
+## Technologies et Compétences
 * **Langages :** JavaScript (ES6+), JSON
 * **API :** Minecraft Bedrock Script API et UI (`@minecraft/server`; `@minecraft/server-ui`)
 * **Concepts :** Programmation orientée événements, State Management, Game Loop (Tick events).
 
-## ⚙️ Architecture du Code
+## Architecture du Code
 *L'intelligence du mod se trouve principalement dans le Behavior Pack.*
 * **`scripts/main.js` :** Point d'entrée gérant l'abonnement aux événements du monde (`world.events`).
 * **`behavior_pack/entities/` :** Définition JSON des entités avec leurs composantes de comportement (pathfinding, interactions).
 * **Communication :** Utilisation des *Dynamic Properties* pour sauvegarder l'état des joueurs ou du monde entre les sessions.
 
-## 🚀 Installation pour les joueurs
+## Installation pour les joueurs
 1. Allez dans la section [Releases](../../releases) de ce dépôt.
 2. Téléchargez le fichier `.mcaddon`.
 3. Double-cliquez sur le fichier pour l'importer automatiquement dans Minecraft.
