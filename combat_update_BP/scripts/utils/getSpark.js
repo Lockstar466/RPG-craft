@@ -1,4 +1,11 @@
-import { world, system } from "@minecraft/server";
+/**
+ * Script qui gère l'acquisition de droit de capacité.
+ * La fonction getspark() gère l'acquisition du tag "spark" suite à l'utilisation de l'"Arche du pouvoir"
+ * La fonction removeSpark() gère (comme son nom l'indique), la suppression du tag "Spark" à la mort du joueur.
+ * Idem pour la fonction removeClass() qui retire la classe d'un joueur mort.
+ */
+
+import { world } from "@minecraft/server";
 
 export function getSpark () {
     world.afterEvents.itemUse.subscribe((event) => {

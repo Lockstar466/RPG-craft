@@ -1,3 +1,10 @@
+/**
+ *Script qui gère le cooldown entre les capacitées pour éviter le spam et les rendre équitable l'utilisation de ces dernières.
+ On a la fonction checkCooldown() qui permet de vérifier tout d'abord si le cooldown est terminé ou pas.
+ S'il est terminé, la fonction useCooldown() est utilisée activer le cooldown d'une capacité.
+ Les capacités "Wither wave" et "Aura monster" ne sont pas affichées car elles sont considérées comme des passifs.
+ */
+
 import { system } from "@minecraft/server";
 
 const globalCooldown = new Map();

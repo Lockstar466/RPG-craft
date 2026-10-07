@@ -1,7 +1,15 @@
-import { world, system, DisplaySlotId, ObjectiveSortOrder } from "@minecraft/server";
+/**
+ * Script qui gère la gestion générale du mana et tout évènement y étant lié directement.
+ * initManaSystem() attribut l'objet mana au joueur dès l'attribution du tag "spark". La quantité de mana maximale étant de 100 (MAX_MANA).
+ * L'affichage est aussi gérée par cette fonction qui affiche la quantité en chiffre et sous forme de barre dynamique dans l'actionbar du joueur très vite pour créer un effet de persistance.
+ * Le gain de mana est aussi géré de 2 façons: passif (1 point de mana chaque 8 s) et actif (utilisation d'une fiole de mana).
+ * La vérification du mana par checkMana(player, cost) permet de vérifier avant l'utilisation d'une capacité si le joueur possède la quantité requise.
+ */
+
+import { world, system/*, DisplaySlotId, ObjectiveSortOrder*/ } from "@minecraft/server";
 
 const MAX_MANA = 100;
-const OBJECTIVE_NAME = "mana_monitor";
+//const OBJECTIVE_NAME = "mana_monitor";
 
 //function initScoreboardSystem() {
 //    let objective = world.scoreboard.getObjective(OBJECTIVE_NAME);
@@ -37,7 +45,7 @@ export function initManaSystem() {
                 }
             }
         }
-    }, 160); //regénération du mana
+    }, 160); //regénération passive du mana
 
     system.runInterval(() => {
         for (const player of world.getAllPlayers()) {
@@ -45,7 +53,8 @@ export function initManaSystem() {
             
             if (player.hasTag("spark") && classList.some(name => player.hasTag(name))) {
                 const mana = player.getDynamicProperty("mana") ?? MAX_MANA;
-        
+                
+                //Affichage de la barre de mana dans l'actionbar
                 const totalBars = 20;
                 const manaPercentage = mana / MAX_MANA;
                 const filledBars = Math.round(totalBars * manaPercentage);

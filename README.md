@@ -19,5 +19,5 @@ Un add-on pour Minecraft Bedrock Edition (Windows 10, Consoles, Mobile) ajoutant
 3. Double-cliquez sur le fichier pour l'importer automatiquement dans Minecraft.
 4. Activez le "Behavior Pack" et le "Resource Pack" dans les paramètres de votre monde, et n'oubliez pas d'activer les **Holiday Creator Features** / **Beta APIs** si nécessaire.
 
-## 👨‍💻 Pour les développeurs (Contribution)
+## Pour les développeurs (Contribution)
 Cloner le projet et placer les dossiers `behavior_pack` et `resource_pack` directement dans le dossier `development_behavior_packs` et `development_resource_packs` du dossier `com.mojang` de votre installation Minecraft.
