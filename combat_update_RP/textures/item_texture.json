@@ -1,0 +1,51 @@
+{
+    "texture_data": {
+        "fiole_mana":{
+            "textures": "textures/combat/items/fiole_mana"
+        },
+        "arche_pouvoir": {
+            "textures": "textures/combat/items/arche_pouvoir"
+        },
+        "echo_blast":  {
+            "textures": "textures/combat/items/Echo_blast"
+        },
+        "codex":{
+            "textures": "textures/combat/items/Codex"
+        },
+        "incarnation": {
+            "textures": "textures/combat/items/Incarnation"
+        },
+        "morphose": {
+            "textures": "textures/combat/items/Morphose"
+        },
+        "thunder": {
+            "textures":"textures/combat/items/Thunder"
+        },
+        "mystery_egg": {
+            "textures": "textures/combat/items/Mystery_egg"
+        },
+        "ender_switcher":{
+            "textures": "textures/combat/items/ender_switcher"
+        },
+        "illusion": {
+            "textures": "textures/combat/items/illusion"
+        },
+        "compacted_web": {
+            "textures": "textures/combat/items/compacted_web"
+        },
+        "doom": {
+            "textures": "textures/combat/items/doom.png"
+        },
+        "radar": {
+            "textures": "textures/combat/items/radar.png"
+        },
+        "ender_arrow": {
+            "textures": "textures/combat/items/ender_arrow.png"
+        },
+        "ender_resin": {
+            "textures": "textures/combat/items/ender_resin.png"
+        }
+    },
+    "texture_name": "atlas.items",
+    "resource_pack_name": "special_ability_rp"
+}

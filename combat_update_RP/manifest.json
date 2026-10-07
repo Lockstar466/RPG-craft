@@ -1,0 +1,17 @@
+{
+  "format_version": 2,
+  "header": {
+    "name": "Combat update",
+    "description": "Ressources pour les items custom",
+    "uuid": "5efb2e71-3c44-4ca9-bc59-29e7e2b39db8",
+    "version": [1, 1, 0],
+    "min_engine_version": [1, 21, 0]
+  },
+  "modules": [
+    {
+      "type": "resources",
+      "uuid": "2fa0d371-52e4-4bd0-8e61-6874d7d42165",
+      "version": [1, 1, 0]
+    }
+  ]
+}

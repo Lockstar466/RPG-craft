@@ -1,0 +1,36 @@
+{
+    "format_version": 2,
+    "header": {
+        "name": "Combat update",
+        "description": "La mise à jour tant attendu des combats dans l'arène !",
+        "uuid": "495e2ea0-5d9d-468e-9009-9bc7ff8c1a5e",
+        "version":[1,1,2],
+        "min_engine_version": [1,21,0]
+    },
+
+    "modules": [
+        {
+            "type": "data",
+            "uuid": "c7301712-548f-4e83-a2ba-408ab2c1d33a",
+            "version":[1,1,1]
+        },
+        {
+            "type": "script",
+            "language": "Javascript",
+            "entry": "scripts/main.js",
+            "uuid": "57fd3013-b9cb-49de-827d-e99a61f62aeb",
+            "version":[1,1,1]
+        }
+    ],
+    "dependencies": [
+        {
+            "module_name": "@minecraft/server",
+            "version": "1.14.0"
+        },
+
+        {
+            "module_name": "@minecraft/server-ui",
+            "version": "1.2.0"
+        }
+    ]
+}

@@ -1,0 +1,17 @@
+{
+    "typeAcquisition": {
+        "include": [
+            "jest"
+        ]
+    },
+    "compilerOptions": {
+        "module": "node16",
+        "target": "es2020",
+        "moduleResolution": "node16",
+        "checkJs": true,
+        "allowJs": true
+    },
+    "exclude": [
+        "node_modules"
+    ]
+}

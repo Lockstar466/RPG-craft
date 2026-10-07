@@ -1,0 +1,24 @@
+{
+    "format_version": "1.26.30",
+    "minecraft:item": {
+        "description": {
+            "identifier": "combat:echo_blast",
+            "menu_category": {
+                "category": "items"
+            }
+        },
+
+        "components": {
+            "minecraft:max_stack_size": 1,
+            "minecraft:icon": {
+                "textures": {
+                    "default": "echo_blast"
+                }
+            },
+            "minecraft:display_name": {
+                "value": "§d§oEcho Blast§r"
+            },
+            "minecraft:glint": true
+        }
+    }
+}

@@ -1,0 +1,21 @@
+# Fichiers générés par le système
+.DS_Store
+Thumbs.db
+
+# Configuration de l'éditeur (VS Code, IntelliJ, etc.)
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Dossiers npm (si tu utilises Node.js pour des linters ou TypeScript)
+node_modules/
+package-lock.json
+
+# Archives d'installation (à distribuer via GitHub Releases, pas dans le code source)
+*.mcaddon
+*.mcpack
+*.zip
