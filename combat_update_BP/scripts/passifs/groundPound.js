@@ -1,3 +1,14 @@
+/**
+ * APTITUDE EN PHASE DE TEST.
+ * DESCRIPTION: En vol en elytra, le joueur possédant le tag "test_2" appuie sur la touche shift ou sneak pour faire une attaque plongeante 
+ * qui génère en fonction du temps de chute et de la distance, une explosion et des dégats de zone.
+ * initGroundPound() : introduction de l'objet plungeData qui possède la donnée du joueur, le temps de chute(initialisée à 0) et la puissance(initialisée à 1) détecte que le joueur en en vol.
+ * Si la touche "sneak" est enfoncée et est en vol, le compteur démarre et un tag est attribué.
+ * Lorsque le compteur compte 20 tick (1s), il est réinitialisé et la puissance est élevé à +1.
+ * Si la touche "sneak" est relachée, le compteur s'arrête et le joueur perd le tag lui conférant la capacité de chute.
+ * Perte du tag, remise des compteurs à 0 et 1.
+ */
+
 import { world, system, EntityDamageCause } from "@minecraft/server";
 
 const plungeData = new Map();
@@ -55,7 +66,10 @@ export function initGroundPound() {
             }
             
             //--- IMPACT (KABOOM)---
-//Applique les dégats et l'explosion eventuellement
+/**
+ * Lorsque le joueur touche le sol, l'effet de resistance se termine et les variables plunge.puissance et plunge.timer sont sauvegardées dans finalPower et finalTimer.
+ * Des dégats sont inflgés aux entités (sauf le joueur lui même), applique une explosion proportionnelle à la puissance si elle st supérieure à 3.
+ */
 
             if (player.hasTag("pounding") && player.isOnGround) {
                 player.removeTag("pounding");

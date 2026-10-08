@@ -1,3 +1,9 @@
+/**
+ * APTITUDE EN PHASE DE TEST.
+ * DESCRIPTION: Initialisation avec l'objet speedData contennant le "timer" et le "tier" pour tout joueur qui possède le tag test_1.
+ * Lorsque le joueur est en srpint, le timer s'active et compte le nombre de temps en course. Si le course est interrompue, "timer" et "tier" sont remis à 0.
+ */
+
 import { world, system } from "@minecraft/server";
 
 const speedData = new Map();
@@ -18,6 +24,7 @@ export function initSpeedBoost() {
                 continue;
             }
 
+            //Chaque 2 ticks -> speedster.timer+=2.
             speedster.timer += 2;
 
             if (speedster.timer >= 60) {
@@ -30,11 +37,13 @@ export function initSpeedBoost() {
                 }
             }
 
+            //Au bout de 3 secondes (60 ticks) on a speedster.tier++ -> amp pour augenter l'effet de vitesse. Lorsque speedster.tier >= 4, amp est bloqué à 4.
             if (speedster.tier > 0) {
                 const amp = Math.min(speedster.tier, 4);
                 player.addEffect("speed", 10, { amplifier: amp, showParticles: false });
             }
 
+            //Lorsque la speedster.tier >= 4, le bloc sur lequel marche le joueur est enflammé 
             if (speedster.tier >= 4 ) {
                 const currentLoc = player.location;
                 const boostLoc = {
